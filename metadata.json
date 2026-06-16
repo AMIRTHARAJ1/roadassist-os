@@ -1,0 +1,6 @@
+{
+  "name": "RoadAssist OS",
+  "description": "On-Road Vehicle Breakdown Detection & Roadside Assistance Management Console",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
