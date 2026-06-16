@@ -26,6 +26,7 @@ jobs:
       run: npm run test:e2e:ci
       env:
         CI: true
+        DISABLE_HMR: "true"
         
     - name: Generate CSV Report
       if: always()
