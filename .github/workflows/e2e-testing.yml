@@ -23,6 +23,17 @@ jobs:
       run: npm ci
 
     - name: Run E2E tests
-      run: npm run test:e2e
+      run: npm run test:e2e:ci
       env:
         CI: true
+        
+    - name: Generate CSV Report
+      if: always()
+      run: node scripts/generate-csv-report.js
+
+    - name: Upload Test Report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: E2E-Test-Report
+        path: test_report.csv

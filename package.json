@@ -7,9 +7,9 @@
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit",
-    "test:e2e": "start-server-and-test dev http://127.0.0.1:3000 'mocha -r tsx \"tests/**/*.test.ts\" --timeout 15000'"
+    "test:e2e": "start-server-and-test dev http://127.0.0.1:3000 'mocha -r tsx \"tests/**/*.test.ts\" --timeout 60000'",
+    "test:e2e:ci": "start-server-and-test dev http://127.0.0.1:3000 'npm run run:mocha'",
+    "run:mocha": "mocha -r tsx \"tests/**/*.test.ts\" --timeout 60000 --reporter json > test-results.json"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

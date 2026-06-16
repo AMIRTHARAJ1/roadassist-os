@@ -1,0 +1,538 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 20,
+    "passes": 0,
+    "pending": 0,
+    "failures": 20,
+    "start": "2026-06-16T04:28:17.881Z",
+    "end": "2026-06-16T04:28:23.025Z",
+    "duration": 5144
+  },
+  "tests": [
+    {
+      "title": "1. should load the app and display the main page",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 1. should load the app and display the main page",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 4221,
+      "currentRetry": 0,
+      "err": {
+        "stack": "WebDriverError: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:31:5)",
+        "message": "unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=149.0.7827.103)",
+        "name": "WebDriverError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff69399448e]\n\tchromedriver!(No symbol) [0x7ff693984701]\n\tchromedriver!(No symbol) [0x7ff69398656f]\n\tchromedriver!(No symbol) [0x7ff693984ca3]\n\tchromedriver!(No symbol) [0x7ff69398446b]\n\tchromedriver!(No symbol) [0x7ff693984121]\n\tchromedriver!(No symbol) [0x7ff693981e0b]\n\tchromedriver!(No symbol) [0x7ff693982552]\n\tchromedriver!(No symbol) [0x7ff69399bba6]\n\tchromedriver!(No symbol) [0x7ff693a3f8e4]\n\tchromedriver!(No symbol) [0x7ff693a19d7a]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "2. should display the RoadAssist OS header",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 2. should display the RoadAssist OS header",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 18,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'RoadAssist OS')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:38:20)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'RoadAssist OS')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "3. should contain the Login Module by default",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 3. should contain the Login Module by default",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 12,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Secure Dispatch Access')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:43:25)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Secure Dispatch Access')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "4. should have an input for Name",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 4. should have an input for Name",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:48:23)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "5. should have an input for Email",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 5. should have an input for Email",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@type='email']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:53:24)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@type='email']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "6. should have a Role selection dropdown",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 6. should have a Role selection dropdown",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"tag name\",\"selector\":\"select\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:58:24)",
+        "message": "no such element: Unable to locate element: {\"method\":\"tag name\",\"selector\":\"select\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "7. should have an Access Secure System login button",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 7. should have an Access Secure System login button",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 10,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Access Secure System')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:63:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Access Secure System')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "8. should have an About Research Project link in header",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 8. should have an About Research Project link in header",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'About Research Project')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:68:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'About Research Project')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "9. should login as a Customer successfully",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 9. should login as a Customer successfully",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:75:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "10. should display the Welcome back greeting",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 10. should display the Welcome back greeting",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Welcome back, Test Customer')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:85:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Welcome back, Test Customer')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "11. should display Live Operations Map",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 11. should display Live Operations Map",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h3[contains(text(), 'Live Operations Map')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:90:17)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h3[contains(text(), 'Live Operations Map')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "12. should display Request Emergency Service button",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 12. should display Request Emergency Service button",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Request Emergency Service')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:95:20)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Request Emergency Service')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "13. should logout and return to login screen",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 13. should logout and return to login screen",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:102:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "14. should login as a Mechanic successfully",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 14. should login as a Mechanic successfully",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:107:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "15. should display Standby Technician Desk header",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 15. should display Standby Technician Desk header",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Standby Technician Desk')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:116:20)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Standby Technician Desk')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "16. should display Incoming Dispatch Pings section",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 16. should display Incoming Dispatch Pings section",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Incoming Dispatch Pings')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:121:19)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Incoming Dispatch Pings')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "17. should logout from mechanic portal",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 17. should logout from mechanic portal",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:128:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "18. should login as an Admin successfully",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 18. should login as an Admin successfully",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:133:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "19. should display System Overview statistics panel",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 19. should display System Overview statistics panel",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'System Overview')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:142:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'System Overview')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "20. should display Active Incidents list",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 20. should display Active Incidents list",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Active Incidents')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:147:23)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Active Incidents')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "1. should load the app and display the main page",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 1. should load the app and display the main page",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 4221,
+      "currentRetry": 0,
+      "err": {
+        "stack": "WebDriverError: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:31:5)",
+        "message": "unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=149.0.7827.103)",
+        "name": "WebDriverError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff69399448e]\n\tchromedriver!(No symbol) [0x7ff693984701]\n\tchromedriver!(No symbol) [0x7ff69398656f]\n\tchromedriver!(No symbol) [0x7ff693984ca3]\n\tchromedriver!(No symbol) [0x7ff69398446b]\n\tchromedriver!(No symbol) [0x7ff693984121]\n\tchromedriver!(No symbol) [0x7ff693981e0b]\n\tchromedriver!(No symbol) [0x7ff693982552]\n\tchromedriver!(No symbol) [0x7ff69399bba6]\n\tchromedriver!(No symbol) [0x7ff693a3f8e4]\n\tchromedriver!(No symbol) [0x7ff693a19d7a]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "2. should display the RoadAssist OS header",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 2. should display the RoadAssist OS header",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 18,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'RoadAssist OS')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:38:20)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'RoadAssist OS')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "3. should contain the Login Module by default",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 3. should contain the Login Module by default",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 12,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Secure Dispatch Access')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:43:25)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Secure Dispatch Access')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "4. should have an input for Name",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 4. should have an input for Name",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:48:23)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "5. should have an input for Email",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 5. should have an input for Email",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@type='email']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:53:24)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@type='email']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "6. should have a Role selection dropdown",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 6. should have a Role selection dropdown",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"tag name\",\"selector\":\"select\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:58:24)",
+        "message": "no such element: Unable to locate element: {\"method\":\"tag name\",\"selector\":\"select\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "7. should have an Access Secure System login button",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 7. should have an Access Secure System login button",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 10,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Access Secure System')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:63:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Access Secure System')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "8. should have an About Research Project link in header",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 8. should have an About Research Project link in header",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'About Research Project')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:68:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'About Research Project')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "9. should login as a Customer successfully",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 9. should login as a Customer successfully",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:75:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "10. should display the Welcome back greeting",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 10. should display the Welcome back greeting",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Welcome back, Test Customer')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:85:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Welcome back, Test Customer')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "11. should display Live Operations Map",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 11. should display Live Operations Map",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h3[contains(text(), 'Live Operations Map')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:90:17)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h3[contains(text(), 'Live Operations Map')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "12. should display Request Emergency Service button",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 12. should display Request Emergency Service button",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Request Emergency Service')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:95:20)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[contains(text(), 'Request Emergency Service')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "13. should logout and return to login screen",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 13. should logout and return to login screen",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:102:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "14. should login as a Mechanic successfully",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 14. should login as a Mechanic successfully",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:107:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "15. should display Standby Technician Desk header",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 15. should display Standby Technician Desk header",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Standby Technician Desk')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:116:20)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'Standby Technician Desk')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "16. should display Incoming Dispatch Pings section",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 16. should display Incoming Dispatch Pings section",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Incoming Dispatch Pings')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:121:19)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Incoming Dispatch Pings')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "17. should logout from mechanic portal",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 17. should logout from mechanic portal",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:128:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[title=\"Sign Out Session\"]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "18. should login as an Admin successfully",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 18. should login as an Admin successfully",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:133:5)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='e.g. Rajesh Kumar']\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "19. should display System Overview statistics panel",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 19. should display System Overview statistics panel",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'System Overview')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:142:22)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h1[contains(text(), 'System Overview')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    },
+    {
+      "title": "20. should display Active Incidents list",
+      "fullTitle": "End-to-End Test for the App (20 Test Cases) 20. should display Active Incidents list",
+      "file": "C:\\Users\\amirt\\Downloads\\roadassist-os (1)\\tests\\e2e\\app.test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {
+        "stack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Active Incidents')]\"}\n  (Session info: chrome=149.0.7827.103)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async Context.<anonymous> (tests\\e2e\\app.test.ts:147:23)",
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[contains(text(), 'Active Incidents')]\"}\n  (Session info: chrome=149.0.7827.103)",
+        "name": "NoSuchElementError",
+        "remoteStacktrace": "\tchromedriver!GetHandleVerifier [0x7ff693e5fd95+15395]\n\tchromedriver!GetHandleVerifier [0x7ff693e5fdf0+153f0]\n\tchromedriver!(No symbol) [0x7ff6939978fd]\n\tchromedriver!(No symbol) [0x7ff6939f1479]\n\tchromedriver!(No symbol) [0x7ff6939f177c]\n\tchromedriver!(No symbol) [0x7ff693a41ef7]\n\tchromedriver!(No symbol) [0x7ff693a3eaeb]\n\tchromedriver!(No symbol) [0x7ff6939e3a58]\n\tchromedriver!(No symbol) [0x7ff6939e4953]\n\tchromedriver!GetHandleVerifier [0x7ff694425511+5dab11]\n\tchromedriver!GetHandleVerifier [0x7ff69441f8fb+5d4efb]\n\tchromedriver!GetHandleVerifier [0x7ff694443205+5f8805]\n\tchromedriver!GetHandleVerifier [0x7ff693e7cc6e+3226e]\n\tchromedriver!GetHandleVerifier [0x7ff693e8562c+3ac2c]\n\tchromedriver!GetHandleVerifier [0x7ff693e69984+1ef84]\n\tchromedriver!GetHandleVerifier [0x7ff693e69b14+1f114]\n\tchromedriver!GetHandleVerifier [0x7ff693e4ca77+2077]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd81fbe957+17]\n\tntdll!RtlUserThreadStart [0x7ffd82bc427c+2c]\n"
+      }
+    }
+  ],
+  "passes": []
+}

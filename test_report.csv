@@ -1,0 +1,41 @@
+Test Suite,Test Name,Status,Duration (ms),Error Message
+"End-to-End Test for the App (20 Test Cases) 1. should load the app and display the main page","1. should load the app and display the main page",Failed,4221,"unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 2. should display the RoadAssist OS header","2. should display the RoadAssist OS header",Failed,18,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h1[contains(text(), 'RoadAssist OS')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 3. should contain the Login Module by default","3. should contain the Login Module by default",Failed,12,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h2[contains(text(), 'Secure Dispatch Access')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 4. should have an input for Name","4. should have an input for Name",Failed,7,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//input[@placeholder='e.g. Rajesh Kumar']""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 5. should have an input for Email","5. should have an input for Email",Failed,9,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//input[@type='email']""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 6. should have a Role selection dropdown","6. should have a Role selection dropdown",Failed,6,"no such element: Unable to locate element: {""method"":""tag name"",""selector"":""select""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 7. should have an Access Secure System login button","7. should have an Access Secure System login button",Failed,10,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//button[contains(text(), 'Access Secure System')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 8. should have an About Research Project link in header","8. should have an About Research Project link in header",Failed,6,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//button[contains(text(), 'About Research Project')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 9. should login as a Customer successfully","9. should login as a Customer successfully",Failed,7,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//input[@placeholder='e.g. Rajesh Kumar']""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 10. should display the Welcome back greeting","10. should display the Welcome back greeting",Failed,7,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h1[contains(text(), 'Welcome back, Test Customer')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 11. should display Live Operations Map","11. should display Live Operations Map",Failed,8,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h3[contains(text(), 'Live Operations Map')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 12. should display Request Emergency Service button","12. should display Request Emergency Service button",Failed,6,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//button[contains(text(), 'Request Emergency Service')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 13. should logout and return to login screen","13. should logout and return to login screen",Failed,8,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""button[title=""Sign Out Session""]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 14. should login as a Mechanic successfully","14. should login as a Mechanic successfully",Failed,4,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//input[@placeholder='e.g. Rajesh Kumar']""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 15. should display Standby Technician Desk header","15. should display Standby Technician Desk header",Failed,6,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h1[contains(text(), 'Standby Technician Desk')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 16. should display Incoming Dispatch Pings section","16. should display Incoming Dispatch Pings section",Failed,8,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h2[contains(text(), 'Incoming Dispatch Pings')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 17. should logout from mechanic portal","17. should logout from mechanic portal",Failed,5,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""button[title=""Sign Out Session""]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 18. should login as an Admin successfully","18. should login as an Admin successfully",Failed,9,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//input[@placeholder='e.g. Rajesh Kumar']""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 19. should display System Overview statistics panel","19. should display System Overview statistics panel",Failed,9,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h1[contains(text(), 'System Overview')]""}
+  (Session info: chrome=149.0.7827.103)"
+"End-to-End Test for the App (20 Test Cases) 20. should display Active Incidents list","20. should display Active Incidents list",Failed,8,"no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//h2[contains(text(), 'Active Incidents')]""}
+  (Session info: chrome=149.0.7827.103)"
