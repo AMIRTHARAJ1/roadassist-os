@@ -40,27 +40,27 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   });
 
   it('3. should contain the Login Module by default', async function () {
-    const loginHeader = await driver.findElement(By.xpath("//h2[contains(text(), 'Secure Dispatch Access')]"));
+    const loginHeader = await driver.findElement(By.xpath("//button[contains(text(), 'Sign In')]"));
     expect(loginHeader).to.not.be.null;
   });
 
-  it('4. should have an input for Name', async function () {
-    const nameInput = await driver.findElement(By.xpath("//input[@placeholder='e.g. Rajesh Kumar']"));
-    expect(nameInput).to.not.be.null;
-  });
-
-  it('5. should have an input for Email', async function () {
+  it('4. should have an input for Email', async function () {
     const emailInput = await driver.findElement(By.xpath("//input[@type='email']"));
     expect(emailInput).to.not.be.null;
   });
 
-  it('6. should have a Role selection dropdown', async function () {
-    const roleSelect = await driver.findElement(By.tagName('select'));
-    expect(roleSelect).to.not.be.null;
+  it('5. should have an input for Password', async function () {
+    const passwordInput = await driver.findElement(By.xpath("//input[@type='password']"));
+    expect(passwordInput).to.not.be.null;
   });
 
-  it('7. should have an Access Secure System login button', async function () {
-    const loginBtn = await driver.findElement(By.xpath("//button[contains(text(), 'Access Secure System')]"));
+  it('6. should have Role selection buttons', async function () {
+    const roleBtn = await driver.findElement(By.xpath("//button[contains(text(), 'Customer')]"));
+    expect(roleBtn).to.not.be.null;
+  });
+
+  it('7. should have an Secure Authenticate login button', async function () {
+    const loginBtn = await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]"));
     expect(loginBtn).to.not.be.null;
   });
 
@@ -72,17 +72,20 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
 
   // ========== CUSTOMER DASHBOARD (4 Tests) ==========
   it('9. should login as a Customer successfully', async function () {
-    await driver.findElement(By.xpath("//input[@placeholder='e.g. Rajesh Kumar']")).sendKeys('Test Customer');
-    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('customer@test.com');
-    await driver.findElement(By.tagName('select')).sendKeys('customer');
-    await driver.findElement(By.xpath("//button[contains(text(), 'Access Secure System')]")).click();
+    // Select Customer role
+    await driver.findElement(By.xpath("//button[contains(text(), 'Customer')]")).click();
+    // Fill credentials
+    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('customer@roadassist.org');
+    await driver.findElement(By.xpath("//input[@type='password']")).sendKeys('customer123');
+    // Submit
+    await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
     // Wait for dashboard to load
     await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'Welcome back')]")), 5000);
   });
 
   it('10. should display the Welcome back greeting', async function () {
-    const greeting = await driver.findElement(By.xpath("//h1[contains(text(), 'Welcome back, Test Customer')]"));
+    const greeting = await driver.findElement(By.xpath("//h1[contains(text(), 'Welcome back')]"));
     expect(greeting).to.not.be.null;
   });
 
@@ -100,14 +103,17 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   // ========== MECHANIC PORTAL (4 Tests) ==========
   it('13. should logout and return to login screen', async function () {
     await driver.findElement(By.css('button[title="Sign Out Session"]')).click();
-    await driver.wait(until.elementLocated(By.xpath("//h2[contains(text(), 'Secure Dispatch Access')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'RoadAssist OS')]")), 5000);
   });
 
   it('14. should login as a Mechanic successfully', async function () {
-    await driver.findElement(By.xpath("//input[@placeholder='e.g. Rajesh Kumar']")).sendKeys('Test Mechanic');
-    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('mechanic@test.com');
-    await driver.findElement(By.tagName('select')).sendKeys('mechanic');
-    await driver.findElement(By.xpath("//button[contains(text(), 'Access Secure System')]")).click();
+    // Select Mechanic role
+    await driver.findElement(By.xpath("//button[contains(text(), 'Mechanic Link')]")).click();
+    // Fill credentials
+    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('mechanic.rajesh@roadassist.org');
+    await driver.findElement(By.xpath("//input[@type='password']")).sendKeys('mech123');
+    // Submit
+    await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
     await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'Standby Technician Desk')]")), 5000);
   });
@@ -126,14 +132,17 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   // ========== ADMIN DASHBOARD (4 Tests) ==========
   it('17. should logout from mechanic portal', async function () {
     await driver.findElement(By.css('button[title="Sign Out Session"]')).click();
-    await driver.wait(until.elementLocated(By.xpath("//h2[contains(text(), 'Secure Dispatch Access')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'RoadAssist OS')]")), 5000);
   });
 
   it('18. should login as an Admin successfully', async function () {
-    await driver.findElement(By.xpath("//input[@placeholder='e.g. Rajesh Kumar']")).sendKeys('Test Admin');
-    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('admin@test.com');
-    await driver.findElement(By.tagName('select')).sendKeys('admin');
-    await driver.findElement(By.xpath("//button[contains(text(), 'Access Secure System')]")).click();
+    // Select Admin role
+    await driver.findElement(By.xpath("//button[contains(text(), 'Control Desk')]")).click();
+    // Fill credentials
+    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('admin@roadassist.org');
+    await driver.findElement(By.xpath("//input[@type='password']")).sendKeys('admin123');
+    // Submit
+    await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
     await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'System Overview')]")), 5000);
   });
