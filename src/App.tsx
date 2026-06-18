@@ -103,16 +103,13 @@ export default function App() {
     setUser(loggedInUser);
   };
 
-  const handleLogout = async () => {
-    try {
-      // Attempt real supabase signout
-      await supabase.auth.signOut();
-    } catch (err) {
-      console.warn("Failed to sign out from Supabase (likely mock environment):", err);
-    } finally {
-      // Always clear local state
-      setUser(null);
-    }
+  const handleLogout = () => {
+    // Attempt real supabase signout in background
+    supabase.auth.signOut().catch(err => {
+      console.warn("Failed to sign out from Supabase:", err);
+    });
+    // Always clear local state instantly for a snappy UI
+    setUser(null);
   };
 
   const handleRoleSwap = (newRole: UserRole) => {

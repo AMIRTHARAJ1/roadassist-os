@@ -76,8 +76,13 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     // Select Customer role
     await driver.findElement(By.xpath("//button[contains(text(), 'Customer')]")).click();
     // Fill credentials
-    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('customer@roadassist.org');
-    await driver.findElement(By.xpath("//input[@type='password']")).sendKeys('customer123');
+    const emailInput = await driver.findElement(By.xpath("//input[@type='email']"));
+    await emailInput.clear();
+    await emailInput.sendKeys('customer@roadassist.org');
+    
+    const passInput = await driver.findElement(By.xpath("//input[@type='password']"));
+    await passInput.clear();
+    await passInput.sendKeys('customer123');
     // Submit
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
@@ -112,8 +117,13 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     // Select Mechanic role
     await driver.findElement(By.xpath("//button[contains(text(), 'Mechanic Link')]")).click();
     // Fill credentials
-    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('mechanic.rajesh@roadassist.org');
-    await driver.findElement(By.xpath("//input[@type='password']")).sendKeys('mech123');
+    const emailInput = await driver.findElement(By.xpath("//input[@type='email']"));
+    await emailInput.clear();
+    await emailInput.sendKeys('mechanic.rajesh@roadassist.org');
+    
+    const passInput = await driver.findElement(By.xpath("//input[@type='password']"));
+    await passInput.clear();
+    await passInput.sendKeys('mech123');
     // Submit
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
@@ -142,8 +152,13 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     // Select Admin role
     await driver.findElement(By.xpath("//button[contains(text(), 'Control Desk')]")).click();
     // Fill credentials
-    await driver.findElement(By.xpath("//input[@type='email']")).sendKeys('admin@roadassist.org');
-    await driver.findElement(By.xpath("//input[@type='password']")).sendKeys('admin123');
+    const emailInput = await driver.findElement(By.xpath("//input[@type='email']"));
+    await emailInput.clear();
+    await emailInput.sendKeys('admin@roadassist.org');
+    
+    const passInput = await driver.findElement(By.xpath("//input[@type='password']"));
+    await passInput.clear();
+    await passInput.sendKeys('admin123');
     // Submit
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
