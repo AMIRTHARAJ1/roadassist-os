@@ -14,14 +14,85 @@ import CustomerDashboard from './components/CustomerDashboard';
 import AdminDashModule from './components/AdminDashModule';
 import MechanicPortal from './components/MechanicPortal';
 import { INITIAL_NOTIFICATIONS, INITIAL_REPORTS } from './mockData';
+import { supabase } from './supabaseClient';
 
 export default function App() {
   const [user, setUser] = useState<{ name: string; email: string; role: UserRole } | null>(null);
   
   // Unified Global Request State (enables real-time cross-role interactive simulation!)
-  const [activeRequest, setActiveRequest] = useState<BreakdownReport | null>(null);
+  const [activeRequest, setActiveRequestState] = useState<BreakdownReport | null>(null);
   const [serviceHistory, setServiceHistory] = useState<BreakdownReport[]>(INITIAL_REPORTS);
-  const [notifications, setNotifications] = useState<NotificationAlert[]>(INITIAL_NOTIFICATIONS);
+  const [notifications, setNotificationsState] = useState<NotificationAlert[]>(INITIAL_NOTIFICATIONS);
+
+  React.useEffect(() => {
+    const fetchInitialData = async () => {
+      // 1. Check for existing Supabase auth session (Crucial for Google OAuth redirects)
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session && session.user) {
+        const pendingRole = localStorage.getItem('pending_oauth_role') as UserRole || session.user.user_metadata?.role || 'customer';
+        
+        // If new OAuth login without a role, save it to their metadata
+        if (!session.user.user_metadata?.role && localStorage.getItem('pending_oauth_role')) {
+          await supabase.auth.updateUser({ data: { role: pendingRole } });
+        }
+
+        setUser({
+          name: session.user.user_metadata?.name || session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
+          email: session.user.email || '',
+          role: pendingRole
+        });
+        localStorage.removeItem('pending_oauth_role');
+      }
+
+      // 2. Listen to auth state changes (handles the moment they return from Google)
+      supabase.auth.onAuthStateChange((_event, session) => {
+         if (session && session.user) {
+            const r = session.user.user_metadata?.role || localStorage.getItem('pending_oauth_role') || 'customer';
+            setUser({
+              name: session.user.user_metadata?.name || session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'User',
+              email: session.user.email || '',
+              role: r as UserRole
+            });
+         }
+      });
+
+      // 3. Fetch Mocked/DB Data
+      const { data: reportsData } = await supabase.from('breakdown_reports').select('*').order('requestedAt', { ascending: false });
+      if (reportsData && reportsData.length > 0) {
+        setServiceHistory(reportsData as BreakdownReport[]);
+        // Optionally find the active request
+        const active = reportsData.find(r => !['completed', 'cancelled'].includes(r.status));
+        if (active) setActiveRequestState(active as BreakdownReport);
+      }
+
+      const { data: notifData } = await supabase.from('notifications').select('*').order('timestamp', { ascending: false });
+      if (notifData && notifData.length > 0) {
+        setNotificationsState(notifData as NotificationAlert[]);
+      }
+    };
+    fetchInitialData();
+  }, []);
+
+  const setActiveRequest: React.Dispatch<React.SetStateAction<BreakdownReport | null>> = (value) => {
+    const nextVal = typeof value === 'function' ? value(activeRequest) : value;
+    setActiveRequestState(nextVal);
+    if (nextVal) {
+      supabase.from('breakdown_reports').upsert(nextVal).then(({ error }) => {
+        if (error) console.error('Error upserting active request:', error);
+      });
+    }
+  };
+
+  const setNotifications: React.Dispatch<React.SetStateAction<NotificationAlert[]>> = (value) => {
+    const nextVal = typeof value === 'function' ? value(notifications) : value;
+    setNotificationsState(nextVal);
+    if (nextVal && nextVal.length > 0) {
+      // Upsert the newest notification
+      supabase.from('notifications').upsert(nextVal[0]).then(({ error }) => {
+         if (error) console.error('Error upserting notification:', error);
+      });
+    }
+  };
 
   // About Us / Contact Us modals or custom page toggles
   const [showAboutUs, setShowAboutUs] = useState(false);
@@ -48,6 +119,9 @@ export default function App() {
 
   const addHistoryLog = (report: BreakdownReport) => {
     setServiceHistory([report, ...serviceHistory]);
+    supabase.from('breakdown_reports').upsert(report).then(({ error }) => {
+      if (error) console.error('Error upserting to history log:', error);
+    });
   };
 
   const handleContactSubmit = (e: React.FormEvent) => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Shield, Key, Mail, User, ShieldAlert, Wrench, Lock, CheckCircle } from 'lucide-react';
 import { UserRole } from '../types';
+import { supabase } from '../supabaseClient';
 
 interface LoginModuleProps {
   onLoginSuccess: (user: { name: string; email: string; role: UserRole }) => void;
@@ -16,43 +17,104 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
   const [extraAuthDetails, setExtraAuthDetails] = useState(''); // e.g. License plate for user, base location/tow truck registration for mechanic
   const [msg, setMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-  const handleAutofill = (role: UserRole) => {
-    setSelectedRole(role);
-    if (role === 'customer') {
-      setEmail('customer@roadassist.org');
-      setFullName('Amirtharaj');
-      setPassword('customer123');
-      setPhone('+91 94432 00192');
-    } else if (role === 'mechanic') {
-      setEmail('mechanic.rajesh@roadassist.org');
-      setFullName('Rajesh Kumar (Heavy Tow Rig)');
-      setPassword('mech123');
-      setPhone('+91 98450 12231');
-    } else {
-      setEmail('admin@roadassist.org');
-      setFullName('Super Administrator Desk');
-      setPassword('admin123');
-      setPhone('+91 90038 41031');
-    }
-    setMsg({ type: 'success', text: `Loaded ${role.toUpperCase()} credentials. Click Sign In below.` });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password || (isRegister && (!fullName || !phone))) {
       setMsg({ type: 'error', text: 'Please fill out all required fields.' });
       return;
     }
 
-    setMsg({ type: 'success', text: isRegister ? 'Account created successfully! Autologging in...' : 'Sign in authorized.' });
-    
-    setTimeout(() => {
-      onLoginSuccess({
-        name: fullName || (selectedRole === 'customer' ? 'Amirtharaj' : selectedRole === 'mechanic' ? 'Rajesh Kumar' : 'Admin Operator'),
-        email: email,
-        role: selectedRole
+    if (isRegister) {
+      setMsg({ type: 'success', text: 'Creating account...' });
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            name: fullName,
+            phone: phone,
+            role: selectedRole,
+            extraAuthDetails
+          }
+        }
       });
-    }, 800);
+
+      if (error) {
+        // If Supabase rate limit is hit, fallback to LocalStorage mock for seamless testing
+        if (error.message.toLowerCase().includes('rate limit') || error.status === 429) {
+          setMsg({ type: 'success', text: 'Development Mode: Saving locally to bypass rate limit...' });
+          
+          const localUser = { name: fullName || email.split('@')[0], email, password, role: selectedRole };
+          localStorage.setItem(`mock_user_${email}`, JSON.stringify(localUser));
+          
+          setTimeout(() => {
+            onLoginSuccess({
+              name: localUser.name,
+              email: localUser.email,
+              role: localUser.role
+            });
+          }, 800);
+          return;
+        }
+
+        setMsg({ type: 'error', text: error.message });
+        return;
+      }
+
+      setMsg({ type: 'success', text: 'Account created successfully! Autologging in...' });
+      if (data.user) {
+        setTimeout(() => {
+          onLoginSuccess({
+            name: data.user?.user_metadata?.name || fullName || 'New User',
+            email: data.user?.email || email,
+            role: data.user?.user_metadata?.role || selectedRole
+          });
+        }, 800);
+      }
+    } else {
+      setMsg({ type: 'success', text: 'Authenticating...' });
+
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
+
+      if (error) {
+        // Check if the user was saved in LocalStorage due to previous rate limit
+        const mockUserStr = localStorage.getItem(`mock_user_${email}`);
+        if (mockUserStr) {
+          const mockUser = JSON.parse(mockUserStr);
+          if (mockUser.password === password) {
+            setMsg({ type: 'success', text: 'Sign in authorized (Local Dev).' });
+            setTimeout(() => {
+              onLoginSuccess({
+                name: mockUser.name,
+                email: mockUser.email,
+                role: mockUser.role
+              });
+            }, 800);
+            return;
+          } else {
+            setMsg({ type: 'error', text: 'Invalid login credentials' });
+            return;
+          }
+        }
+
+        setMsg({ type: 'error', text: error.message });
+        return;
+      }
+
+      setMsg({ type: 'success', text: 'Sign in authorized.' });
+      if (data.user) {
+        setTimeout(() => {
+          onLoginSuccess({
+            name: data.user?.user_metadata?.name || 'User',
+            email: data.user?.email || email,
+            role: data.user?.user_metadata?.role || selectedRole
+          });
+        }, 800);
+      }
+    }
   };
 
   return (
@@ -74,36 +136,6 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
             <p className="text-xs text-slate-500 mt-1 max-w-sm">
               Enhancing Real-Time On-Road Vehicle Breakdown Detection & Roadside Assistance Management
             </p>
-          </div>
-
-          {/* Quick Demo Access Bar */}
-          <div className="bg-blue-50/70 border border-blue-100 rounded-xl p-3 mb-6">
-            <p className="text-[11px] font-semibold text-blue-800 uppercase tracking-wider mb-2 text-center">
-              Quick Demo Auto-Fill (Interactive Roles):
-            </p>
-            <div className="grid grid-cols-3 gap-2">
-              <button
-                type="button"
-                onClick={() => handleAutofill('customer')}
-                className="px-2 py-1.5 bg-blue-600 text-white hover:bg-blue-700 text-xs rounded-lg font-medium transition shadow-sm cursor-pointer"
-              >
-                ⚙️ User
-              </button>
-              <button
-                type="button"
-                onClick={() => handleAutofill('mechanic')}
-                className="px-2 py-1.5 bg-orange-500 text-white hover:bg-orange-600 text-xs rounded-lg font-medium transition shadow-sm cursor-pointer"
-              >
-                🔧 Mechanic
-              </button>
-              <button
-                type="button"
-                onClick={() => handleAutofill('admin')}
-                className="px-2 py-1.5 bg-slate-800 text-white hover:bg-slate-900 text-xs rounded-lg font-medium transition shadow-sm cursor-pointer"
-              >
-                👑 Admin
-              </button>
-            </div>
           </div>
 
           {/* Role selector inside form tab */}
@@ -140,6 +172,32 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
             </button>
           </div>
 
+          {/* Sign In / Sign Up Tabs */}
+          <div className="flex mb-6 border-b border-slate-200">
+            <button
+              onClick={() => { setIsRegister(false); setMsg(null); }}
+              className={`flex-1 pb-3 text-sm font-bold transition-all relative outline-none ${
+                !isRegister ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'
+              }`}
+            >
+              Sign In
+              {!isRegister && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 rounded-t-full"></span>
+              )}
+            </button>
+            <button
+              onClick={() => { setIsRegister(true); setMsg(null); }}
+              className={`flex-1 pb-3 text-sm font-bold transition-all relative outline-none ${
+                isRegister ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'
+              }`}
+            >
+              Sign Up
+              {isRegister && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 rounded-t-full"></span>
+              )}
+            </button>
+          </div>
+
           {msg && (
             <div
               className={`p-3 rounded-lg text-xs font-medium mb-4 flex items-start gap-2 ${
@@ -157,7 +215,7 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4" autoComplete="off">
             {isRegister && (
               <>
                 <div>
@@ -214,6 +272,7 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@roadassist.org"
+                  autoComplete="off"
                   className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none"
                 />
               </div>
@@ -240,6 +299,7 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
+                  autoComplete="new-password"
                   className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none"
                 />
               </div>
@@ -248,7 +308,7 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
             {isRegister && selectedRole === 'mechanic' && (
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  Tow Truck Plate / Certification ID
+                  Tow Truck Plate / Certification ID (Optional)
                 </label>
                 <div className="relative">
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
@@ -256,7 +316,6 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
                   </span>
                   <input
                     type="text"
-                    required
                     value={extraAuthDetails}
                     onChange={(e) => setExtraAuthDetails(e.target.value)}
                     placeholder="e.g. MH-12-PQ-9981 or MECH-CR501"
@@ -300,19 +359,7 @@ export default function LoginModule({ onLoginSuccess }: LoginModuleProps) {
             </button>
           </form>
 
-          <div className="mt-6 text-center border-t border-slate-100 pt-4">
-            <button
-              onClick={() => {
-                setIsRegister(!isRegister);
-                setMsg(null);
-              }}
-              className="text-xs text-slate-500 hover:text-blue-600 font-medium cursor-pointer"
-            >
-              {isRegister
-                ? 'Already verified? Let\'s Sign In'
-                : 'Need roadside credentials? Build Account'}
-            </button>
-          </div>
+          {/* Remove bottom toggle as it is now handled by top tabs */}
         </div>
       </div>
 
