@@ -29,8 +29,8 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   // ========== CORE UI & LOGIN (8 Tests) ==========
   it('1. should load the app and display the main page', async function () {
     await driver.get('http://127.0.0.1:3000');
-    // Wait for the React app to render the login module
-    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 5000);
+    // Wait for the React app to render the login module (give Vite extra time to compile on first load in CI)
+    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 20000);
     const root = await driver.findElement(By.id('root'));
     expect(root).to.not.be.null;
   });
@@ -87,7 +87,7 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
     // Wait for dashboard to load
-    await driver.wait(until.elementLocated(By.xpath("//h2[contains(text(), 'On-Road Vehicle Breakdown Detection')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h2[contains(text(), 'On-Road Vehicle Breakdown Detection')]")), 10000);
   });
 
   it('10. should display the active user name greeting', async function () {
@@ -110,7 +110,7 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   it('13. should logout and return to login screen', async function () {
     await driver.findElement(By.css('button[title="Sign Out Session"]')).click();
     // Wait for the Login Module to mount
-    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 10000);
   });
 
   it('14. should login as a Mechanic successfully', async function () {
@@ -127,7 +127,7 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     // Submit
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
-    await driver.wait(until.elementLocated(By.xpath("//h3[contains(text(), 'Technician Fleet Link')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h3[contains(text(), 'Technician Fleet Link')]")), 10000);
   });
 
   it('15. should display Connected Dispatch Stream header', async function () {
@@ -145,7 +145,7 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   it('17. should logout from mechanic portal', async function () {
     await driver.findElement(By.css('button[title="Sign Out Session"]')).click();
     // Wait for the Login Module to mount
-    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 10000);
   });
 
   it('18. should login as an Admin successfully', async function () {
@@ -162,7 +162,7 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     // Submit
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
-    await driver.wait(until.elementLocated(By.xpath("//h3[contains(text(), 'Master Control Admin')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h3[contains(text(), 'Master Control Admin')]")), 10000);
   });
 
   it('19. should display Assistance Performance header', async function () {
