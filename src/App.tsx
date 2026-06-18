@@ -103,8 +103,16 @@ export default function App() {
     setUser(loggedInUser);
   };
 
-  const handleLogout = () => {
-    setUser(null);
+  const handleLogout = async () => {
+    try {
+      // Attempt real supabase signout
+      await supabase.auth.signOut();
+    } catch (err) {
+      console.warn("Failed to sign out from Supabase (likely mock environment):", err);
+    } finally {
+      // Always clear local state
+      setUser(null);
+    }
   };
 
   const handleRoleSwap = (newRole: UserRole) => {

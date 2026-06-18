@@ -29,7 +29,8 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   // ========== CORE UI & LOGIN (8 Tests) ==========
   it('1. should load the app and display the main page', async function () {
     await driver.get('http://127.0.0.1:3000');
-    await driver.wait(until.elementLocated(By.css('body')), 5000);
+    // Wait for the React app to render the login module
+    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 5000);
     const root = await driver.findElement(By.id('root'));
     expect(root).to.not.be.null;
   });
@@ -40,33 +41,33 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   });
 
   it('3. should contain the Login Module by default', async function () {
-    const loginHeader = await driver.findElement(By.xpath("//button[contains(text(), 'Sign In')]"));
-    expect(loginHeader).to.not.be.null;
+    const btn = await driver.findElement(By.xpath("//button[contains(text(), 'Sign In')]"));
+    expect(btn).to.not.be.null;
   });
 
   it('4. should have an input for Email', async function () {
-    const emailInput = await driver.findElement(By.xpath("//input[@type='email']"));
-    expect(emailInput).to.not.be.null;
+    const email = await driver.findElement(By.xpath("//input[@type='email']"));
+    expect(email).to.not.be.null;
   });
 
   it('5. should have an input for Password', async function () {
-    const passwordInput = await driver.findElement(By.xpath("//input[@type='password']"));
-    expect(passwordInput).to.not.be.null;
+    const password = await driver.findElement(By.xpath("//input[@type='password']"));
+    expect(password).to.not.be.null;
   });
 
   it('6. should have Role selection buttons', async function () {
-    const roleBtn = await driver.findElement(By.xpath("//button[contains(text(), 'Customer')]"));
-    expect(roleBtn).to.not.be.null;
+    const mechanicRole = await driver.findElement(By.xpath("//button[contains(text(), 'Mechanic Link')]"));
+    expect(mechanicRole).to.not.be.null;
   });
 
   it('7. should have an Secure Authenticate login button', async function () {
-    const loginBtn = await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]"));
-    expect(loginBtn).to.not.be.null;
+    const submitBtn = await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]"));
+    expect(submitBtn).to.not.be.null;
   });
 
   it('8. should have an About Research Project link in header', async function () {
-    const aboutBtn = await driver.findElement(By.xpath("//button[contains(text(), 'About Research Project')]"));
-    expect(aboutBtn).to.not.be.null;
+    const projectLink = await driver.findElement(By.xpath("//button[contains(text(), 'About Research Project')]"));
+    expect(projectLink).to.not.be.null;
   });
 
 
@@ -103,7 +104,8 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   // ========== MECHANIC PORTAL (4 Tests) ==========
   it('13. should logout and return to login screen', async function () {
     await driver.findElement(By.css('button[title="Sign Out Session"]')).click();
-    await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'RoadAssist OS')]")), 5000);
+    // Wait for the Login Module to mount
+    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 5000);
   });
 
   it('14. should login as a Mechanic successfully', async function () {
@@ -132,7 +134,8 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
   // ========== ADMIN DASHBOARD (4 Tests) ==========
   it('17. should logout from mechanic portal', async function () {
     await driver.findElement(By.css('button[title="Sign Out Session"]')).click();
-    await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'RoadAssist OS')]")), 5000);
+    // Wait for the Login Module to mount
+    await driver.wait(until.elementLocated(By.xpath("//button[contains(text(), 'Sign In')]")), 5000);
   });
 
   it('18. should login as an Admin successfully', async function () {
