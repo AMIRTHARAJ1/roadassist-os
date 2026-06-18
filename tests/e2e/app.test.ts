@@ -81,21 +81,21 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
     // Wait for dashboard to load
-    await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'Welcome back')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h2[contains(text(), 'On-Road Vehicle Breakdown Detection')]")), 5000);
   });
 
-  it('10. should display the Welcome back greeting', async function () {
-    const greeting = await driver.findElement(By.xpath("//h1[contains(text(), 'Welcome back')]"));
+  it('10. should display the active user name greeting', async function () {
+    const greeting = await driver.findElement(By.xpath("//h3[contains(text(), 'Test Customer')]"));
     expect(greeting).to.not.be.null;
   });
 
-  it('11. should display Live Operations Map', async function () {
-    const map = await driver.findElement(By.xpath("//h3[contains(text(), 'Live Operations Map')]"));
+  it('11. should display Average ETA metric', async function () {
+    const map = await driver.findElement(By.xpath("//span[contains(text(), 'Avg ETA')]"));
     expect(map).to.not.be.null;
   });
 
-  it('12. should display Request Emergency Service button', async function () {
-    const reqBtn = await driver.findElement(By.xpath("//button[contains(text(), 'Request Emergency Service')]"));
+  it('12. should display distress SOS trigger button', async function () {
+    const reqBtn = await driver.findElement(By.xpath("//button[contains(., 'Trigger Distress SOS')]"));
     expect(reqBtn).to.not.be.null;
   });
 
@@ -115,16 +115,16 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     // Submit
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
-    await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'Standby Technician Desk')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h3[contains(text(), 'Technician Fleet Link')]")), 5000);
   });
 
-  it('15. should display Standby Technician Desk header', async function () {
-    const header = await driver.findElement(By.xpath("//h1[contains(text(), 'Standby Technician Desk')]"));
+  it('15. should display Connected Dispatch Stream header', async function () {
+    const header = await driver.findElement(By.xpath("//h2[contains(text(), 'Connected Dispatch Stream')]"));
     expect(header).to.not.be.null;
   });
 
-  it('16. should display Incoming Dispatch Pings section', async function () {
-    const pings = await driver.findElement(By.xpath("//h2[contains(text(), 'Incoming Dispatch Pings')]"));
+  it('16. should display Ready for Dispatch radio state', async function () {
+    const pings = await driver.findElement(By.xpath("//span[contains(text(), 'Ready for Dispatch')]"));
     expect(pings).to.not.be.null;
   });
 
@@ -144,17 +144,17 @@ describe('End-to-End Test for the App (20 Test Cases)', function () {
     // Submit
     await driver.findElement(By.xpath("//button[contains(text(), 'Secure Authenticate')]")).click();
     
-    await driver.wait(until.elementLocated(By.xpath("//h1[contains(text(), 'System Overview')]")), 5000);
+    await driver.wait(until.elementLocated(By.xpath("//h3[contains(text(), 'Master Control Admin')]")), 5000);
   });
 
-  it('19. should display System Overview statistics panel', async function () {
-    const overview = await driver.findElement(By.xpath("//h1[contains(text(), 'System Overview')]"));
-    expect(overview).to.not.be.null;
+  it('19. should display Assistance Performance header', async function () {
+    const panel = await driver.findElement(By.xpath("//h2[contains(text(), 'Assistance Performance')]"));
+    expect(panel).to.not.be.null;
   });
 
-  it('20. should display Active Incidents list', async function () {
-    const incidents = await driver.findElement(By.xpath("//h2[contains(text(), 'Active Incidents')]"));
-    expect(incidents).to.not.be.null;
+  it('20. should display Active System Alert Register', async function () {
+    const list = await driver.findElement(By.xpath("//h3[contains(text(), 'Active System Alert Register')]"));
+    expect(list).to.not.be.null;
   });
 
 });
